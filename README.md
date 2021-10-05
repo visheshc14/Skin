@@ -1,6 +1,8 @@
 # Skin
 Web Security (BCI3001) Project - Prevention of Session Hijacking using Session ID Reset Approach with the Implementation of Kerberos Algorithm in Go &amp; Rust
 
+![architecture](https://user-images.githubusercontent.com/36515357/136011313-ca3a6bec-b710-468f-ba76-b704944a4693.png)
+
 Kerberos in Go Example With Two Different API's To Grasp out The Difference Between Two Approaches. 
 
 In Kerberos.go GSSAPI Has Been Used, The Generic Security Service Application Program Interface is an application programming interface for programs to access security services. The GSSAPI is an IETF standard that addresses the problem of many similar but incompatible security services in use today.
