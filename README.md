@@ -1,5 +1,13 @@
 # Skin
-Web Security (BCI3001) Project - Prevention of Session Hijacking using Session ID Reset Approach with the Implementation of Kerberos Algorithm in Go &amp; Rust
+Web Security (BCI3001) Project - Prevention of Session Hijacking using Session ID Reset Approach with the Implementation of Kerberos Algorithm in Go &amp; Rust.
+
+Session Id - Reset Approach with Implementation of Kerberos Algorithm.  
+
+<img width="1440" alt="2" src="https://user-images.githubusercontent.com/36515357/136685074-01f423ef-1b2a-42d3-85b7-bbe8844e4139.png">
+
+<img width="1440" alt="3" src="https://user-images.githubusercontent.com/36515357/136685076-64a139fd-7aaf-443f-a5d9-b70a2293a47f.png">
+
+<img width="1440" alt="4" src="https://user-images.githubusercontent.com/36515357/136685080-70c863b8-4f8f-45c9-b53b-c48e445fba6d.png">
 
 ![architecture](https://user-images.githubusercontent.com/36515357/136011313-ca3a6bec-b710-468f-ba76-b704944a4693.png)
 
