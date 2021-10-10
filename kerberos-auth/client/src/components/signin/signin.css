@@ -1,0 +1,57 @@
+.signin-heading {
+    width: fit-content;
+    margin: auto;
+}
+.signin-form .input-values {
+    width: fit-content;
+    margin: auto;
+}
+
+.signin-form .msg {
+    width: fit-content;
+    margin: auto;
+    color: red;
+}
+
+.signin-form .input {
+    width: fit-content;
+    margin: auto;
+    padding: 0.6rem;
+}
+
+.submit-btn {
+    margin: auto;
+}
+
+.signin {
+    padding-top: 7rem;
+    padding-bottom: 12.5rem;
+}
+
+.signin-heading {
+    padding-bottom: 4rem;
+}
+
+.signin-content .container.signin {
+    padding: 1rem;
+}
+
+.signin-content .main-raised {
+    margin: 60px 250px;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+}
+
+.signin-content .main {
+    background: #FFF;
+    position: relative;
+    z-index: 3;
+}
+
+.signin-content .title {
+    margin-bottom: 7px;
+    min-height: 32px;
+    color: #3C4858;
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
