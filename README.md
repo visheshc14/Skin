@@ -3,6 +3,59 @@ Web Security (BCI3001) Project - Prevention of Session Hijacking using Session I
 
 Session ID - Reset Approach with Implementation of Kerberos Algorithm.  
 
+Express session stores sessionID in cookie and it will set that cookie in frontend (browser and you can see that cookie called connect.sid in browser) from backend (server). Whenever any request comes from browser first it will check for that cookie (in which sessionID is stored.) If it finds the cookie it doesn't create new session otherwise it will create again a new session. (you can check it by logging req.sessionID in requests).
+
+To overcome this for every request we are making from frontend (browser) we have to send that cookie to backend (server). Server will automatically parse cookie and doesn't create any new session for every request.
+
+We were using axios for request calls in which for every request we were adding {withCredentals:true} so that browser can send cookies to backend server (automatically).
+
+Example - 
+```javascript
+var FileStore = require('session-file-store')(session);
+
+app.use(cors({
+ origin:[process.env.ORIGIN],//Frontend Server localhost:8080
+ methods:['GET','POST','PUT','DELETE'],
+ credentials: true // Enable Set Cookie
+}));
+
+app.use(cookieParser(process.env.SESSIONSECRET)); // Any String Ex: 'Keyboard Cat'
+app.use(session({
+  secret: process.env.SESSIONSECRET,
+  store:new FileStore,
+  cookie:{
+    maxAge:36000,
+    httpOnly:false,
+    secure:false // For Normal HTTP Connection if HTTPS is There We Have to Set it to True
+    },
+  resave: false,
+  saveUninitialized: true
+})) 
+
+app.use(function(req, res, next) {
+
+res.header('Access-Control-Allow-Credentials', true);
+res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
+res.header("Access-Control-Allow-Origin", process.env.ORIGIN);
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-   Type, Accept, Authorization");
+next();
+});
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+// Rest of Code is The Mongo Connection
+```
+Axios Rest Calls::
+```javascript
+ axios.defaults.withCredentials = true;
+ axios.get('http://localhost:8080/getDetails',{
+           headers:{
+                    withCredentials:true,
+
+                   }
+  });
+```
 <img width="1440" alt="2" src="https://user-images.githubusercontent.com/36515357/136685074-01f423ef-1b2a-42d3-85b7-bbe8844e4139.png">
 
 <img width="1440" alt="3" src="https://user-images.githubusercontent.com/36515357/136685076-64a139fd-7aaf-443f-a5d9-b70a2293a47f.png">
