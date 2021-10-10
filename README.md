@@ -171,4 +171,4 @@ Chilkat supports more secure authentication types as well, including Digest, NTL
     http2.DisposeHttp()
     http3.DisposeHttp()
 ```
-# Made by Vishesh Choudhary, Aditi Jain & Pranav Singh
+# Made by Vishesh Choudhary, Aditi Jain & Pranav Singh :heart:
