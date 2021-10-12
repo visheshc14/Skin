@@ -92,7 +92,6 @@ server {
 	}
 }
 ```
-
 Kerberos in Go Example With Two Different API's To Grasp out The Difference Between Two Approaches. 
 
 In Kerberos.go GSSAPI Has Been Used, The Generic Security Service Application Program Interface is an application programming interface for programs to access security services. The GSSAPI is an IETF standard that addresses the problem of many similar but incompatible security services in use today.
