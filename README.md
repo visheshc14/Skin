@@ -64,6 +64,35 @@ Axios Rest Calls::
 
 ![architecture](https://user-images.githubusercontent.com/36515357/136011313-ca3a6bec-b710-468f-ba76-b704944a4693.png)
 
+Kerberos in Rust.
+
+```
+cargo build
+./target/debug/kkdcp
+```
+```
+server {
+	listen 443;
+	listen [::]:443;
+	server_name visheshchoudhary.me;
+
+	ssl on;
+	ssl_certificate /etc/ssl/certs/kdcproxy.pem;
+	ssl_certificate_key /etc/ssl/private/kdcproxy.key;
+
+	root /var/www/kdxproxy;
+	index index.html;
+
+	location /KdcProxy {
+		proxy_pass http://127.0.0.1:8125/;
+		include proxy_params;
+		add_header Cache-Control "no-cache, no-store, must-revalidate";
+		add_header Pragma no-cache;
+		add_header Expires 0;
+	}
+}
+```
+
 Kerberos in Go Example With Two Different API's To Grasp out The Difference Between Two Approaches. 
 
 In Kerberos.go GSSAPI Has Been Used, The Generic Security Service Application Program Interface is an application programming interface for programs to access security services. The GSSAPI is an IETF standard that addresses the problem of many similar but incompatible security services in use today.
