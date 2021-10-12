@@ -9,7 +9,7 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/visheshc14/Skin/src/cmd/server/codec"
+	"github.com/visheshc14/Skin/kerberos-go/src/cmd/server/codec"
 )
 
 func HandleKkdcp(w http.ResponseWriter, req *http.Request) {

@@ -3,7 +3,7 @@ package codec
 import (
 	"encoding/asn1"
 	"encoding/hex"
-	"github.com/visheshc14/Skin/src/cmd/server/model"
+	"github.com/visheshc14/Skin/kerberos-go/src/cmd/server/model"
 	"log"
 )
 
