@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Vishesh Choudhary <visheshc14@gmail.com>"]
 
 [dependencies]
-hyper = "0.10"
+hyper = "0.14"
 pretty_env_logger = "*"
 eagre-asn1 = "*"
 hexdump = "*"
